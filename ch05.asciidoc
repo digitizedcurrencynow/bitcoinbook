@@ -443,7 +443,7 @@ A P2SH transaction locks the output to this hash instead of the longer script, u
 ----
 OP_HASH160 54c557e07dde5bb6cb791c7a540e0a4796f5e97e OP_EQUAL
 ----
-which, as you can see is much much shorter. Instead of "pay to this 5-key multi-signature script", the P2SH equivalent transaction is "pay to a script with this hash". A customer making a payment to Mohammed's company need only include this much shorter locking script in their payment. When Mohammed wants to spend this UTXO, they must present the original redeemScript (the one whose hash locked the UTXO) and the signatures necessary to unlock it, like this:
+which, as you can see is much much shorter. Instead of "pay to this 5-key multi-signature script", the P2SH equivalent transaction is "pay to a script with this hash". A customer making a payment to Mohammed's company need only include this much shorter locking script in their payment. When Mohammed's company wants to spend this UTXO, they must present the original redeemScript (the one whose hash locked the UTXO) and the signatures necessary to unlock it, like this:
 
 ----
 <Sig1> <Sig2> <2 PK1 PK2 PK3 PK4 PK5 5 OP_CHECKMULTISIG>
